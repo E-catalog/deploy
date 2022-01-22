@@ -13,7 +13,7 @@ services:
       - backend
 
   backend:
-    image: dariaveselkova/ecatalog-backend:1.1.0
+    image: ghcr.io/e-catalog/backend:v1.1.1
     env_file:
       - .env
     ports:
@@ -22,7 +22,7 @@ services:
       - backend
 
   frontend:
-    image: dariaveselkova/ecatalog-frontend:1.0.0
+    image: ghcr.io/e-catalog/frontend:v1.0.3
     env_file:
       - .env
     ports:
