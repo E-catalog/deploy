@@ -5,6 +5,8 @@ services:
 
   database:
     image: postgres
+    volumes:
+      - .data/postgres:/var/lib/postgresql/data
     env_file:
       - .env
     ports:
@@ -26,7 +28,7 @@ services:
     env_file:
       - .env
     ports:
-      - 5001:5001
+      - 80:5001
     networks:
       - backend
 
